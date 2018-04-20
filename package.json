@@ -1,0 +1,27 @@
+{
+  "name": "affirm-request",
+  "version": "1.0.0",
+  "description": "make sure the request you initiate surely reaches as suppose",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itsrts/affirm-request.git"
+  },
+  "keywords": [
+    "request",
+    "node",
+    "retry"
+  ],
+  "author": "Rajdeep Deb",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/itsrts/affirm-request/issues"
+  },
+  "homepage": "https://github.com/itsrts/affirm-request#readme",
+  "dependencies": {
+    "request": "^2.85.0"
+  }
+}

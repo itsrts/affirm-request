@@ -1,0 +1,9 @@
+node_modules
+.project
+.settings
+logs
+npm-debug.log
+.DS_Store
+.vscode
+.idea
+*.iml
