@@ -22,6 +22,13 @@
   },
   "homepage": "https://github.com/itsrts/affirm-request#readme",
   "dependencies": {
+    "ajv": "^6.4.0",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "lodash": "^4.17.5",
+    "moment": "^2.22.1",
+    "mongodb": "^3.0.7",
+    "q": "^1.5.1",
     "request": "^2.85.0"
   }
 }
