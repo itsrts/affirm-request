@@ -1,8 +1,8 @@
 # affirm-request
-make sure the request you initiate is completed
+make sure the request you initiate gets completed
 
 ##Add new request
-The application accepts a JSON just as 
+The application accepts JSON
 
 {
     "requestid" : "orderid / instypeid / cartitemid",

@@ -21,7 +21,7 @@ class Status extends BaseRequest {
     async doProcess(request, body) {
         // save the request in ES or SQL
         // let defer = Q.defer();
-        let d = await Data.findOne(Data.prototype.tableName, {"requestid" : body.requestid});
+        let d = await Data.findByRequestId(body.requestid);
         return d;
     }
 
