@@ -1,12 +1,17 @@
 "use strict";
 
 let
-    BaseModel   = require('./baseModel');
+    BaseModel   = require('./baseModel'),
+    REQUEST     = require('request');
 
 class Data extends BaseModel {
 
     constructor(data) {
         super(Data.prototype.tableName, data);
+    }
+
+    getPrimaryKey() {
+        return "requestid";
     }
 
     async doProcessing() {
@@ -17,13 +22,17 @@ class Data extends BaseModel {
     }
 
     markDone() {
-        return Data.updateAll(Data.prototype.tableName, this.data, {'status' : 'done'});
+        this.status = "done";
+        return this.save();
+        // return Data.updateAll(Data.prototype.tableName, this.data, {'status' : 'done'});
     }
   
     passForNext() {
-        let noOfTry = this.data.noOfTry;
+        let noOfTry     = this.data.noOfTry;
         noOfTry++;
-        return Data.updateAll(Data.prototype.tableName, this.data, {'noOfTry' : noOfTry});
+        this.noOfTry    = noOfTry;
+        this.save();
+        // return Data.updateAll(Data.prototype.tableName, this.data, {'noOfTry' : noOfTry});
     }
 
     toString() {

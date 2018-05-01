@@ -11,8 +11,12 @@ class BaseModel {
         this.data       = data;
     }
 
+    getPrimaryKey() {
+        throw "TODO";
+    }
+
     async save() {
-        return await dbHandler.save(this.tableName, this.data);
+        return await dbHandler.save(this.tableName, this.data[this.getPrimaryKey()], this.data);
     }
 
     static async findAll(table, filter, limit) {
